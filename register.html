@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+     background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	height:90px;
+	width:82.5%;
+}
+
+/* Style the topnav links */
+.topnav button {
+    float: right;
+    display: block;
+    color: orange;
+    text-align: right;
+    padding: 5px 5px;
+    text-decoration: none;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.content {
+  padding: 16px;
+  background-image:url("image/final.jpg");
+  height:1100px;
+	background-repeat: no-repeat;
+	background-size: cover;
+  text-align:center;
+}
+.article1 {
+	background: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	color: white;
+  border:1px solid black;
+	padding: 20px;
+	width:82.5%;
+	
+	
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 110px;
+    left: 50px;
+}
+/* Style the footer */
+.footer {
+        background-color: black;
+    padding: 20px;
+    text-align: center;
+	height:100px;
+	color: white;
+  margin: 5px 0px 0px 0px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 200%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+	text-align:center;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+form {
+width:50%;
+padding:20px 50px 20px;
+background:rgba(0,0,0,0.3);
+border:1px solid black;
+box-shadow:0 0 5px;
+font-family:serif;
+position: absolute;
+color: white;
+margin-left: 20%;
+    position: absolute;
+    margin-top: 5%;
+}
+
+h1 {
+text-align:center;
+font-size:28px
+} 
+hr {
+border:0;
+border-bottom:1.5px solid black;
+margin-top:-10px;
+margin-bottom:30px
+} 
+label {
+font-size:17px
+}
+input#age,#religion,#cast,#ms{
+width:50%;
+padding:10px;
+margin:6px 0 20px;
+border:none;
+box-shadow:0 0 5px
+}
+input#submit {
+margin-top:20px;
+font-size:18px;
+background:green;
+border:1px solid #0F799E;
+color:#fff;
+font-weight:700;
+cursor:pointer;
+text-shadow:0 1px 0 #13506D
+}
+input#submit:hover {
+background:linear-gradient(#36caf0 5%,#22abe9 100%)
+}
+input#b1 {
+margin-top:20px;
+font-size:18px;
+background:green;
+border:1px solid #0F799E;
+color:#fff;
+font-weight:700;
+cursor:pointer;
+text-shadow:0 1px 0 #13506D
+}
+input#b1:hover {
+background:linear-gradient(#36caf0 5%,#22abe9 100%)
+}
+
+
+</style>
+</head>
+<body>
+<div class="content">
+<center>
+
+<div class="topnav">
+<img src="image/weddinglogo.png" align="left" style="height:70px;width:200px;"> 
+  <font size="4" face="cambria"><b><a href="homepage.html"><button><img src="image/home.png" style="height:50px;width:50px;" align="middle">Home</button></a>
+</font>
+</div>  
+</center>                                             
+<!--<div class="article1">-->
+<center>
+<form method="post">
+<h2>Registration Form</h2>
+<table>
+  <tr><td><label><b>Username :</b></td>
+<td><input type="text" name="user" id="user" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+<tr><td><label><b>Name :</b></td>
+<td><input type="text" name="name" id="name" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+<tr><td><label><b>E-mail :</b></td>
+<td><input type="email" name="mail" id="mail" style="border:1px;border-style:inset;text-align:center;width:250px;height:40px;" ></td></tr>
+<tr><td><label><b>Password :</b></td>
+<td><input type="password" name="pass" id="pass" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+
+  <tr><td>
+<label><b>Gender :</b> </td>
+<td><input type="radio" name="gen" value="male" ><b>Male</b>   <input type="radio" name="gen" value="female"><b>Female</b>   </td></tr>
+<tr><td><label><b>Age :</b></td>
+<td><input type="text" name="age" id="age" style="border:1px;border-style:inset;width:250px;"></td></tr>
+<tr><td><label><b>Qualifications :</b></td>
+<td><input type="text" name="degree" id="degree" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+<tr><td><label><b>Workplace :</b></td>
+<td><input type="text" name="work" id="work" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+<tr><td><label><b>Hometown :</b></td>
+<td><input type="text" name="home" id="home" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+<tr><td><label><b>Religion : </b></td>
+<td><input type="text" name="rel" id="religion" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+
+<tr><td><label><b>Caste :</b></td>
+<td><input type="text" name="caste" id="cast" style="border:1px;border-style:inset;width:250px;" ></td></tr>
+
+<tr><td><label><b>Marital Status :</b></td>
+<td><select name="ms" id="ms" style="border:1px;border-style:inset;width:250px;">
+<option>Non-Married</option>
+<option>Divorcee</option>
+<option>widow</option>
+</select></td></tr>
+<tr><td><label><b>Tell Me About Yourself :</b></td>
+<td><textarea name="about" id="about" style="border:1px;border-style:inset;width:250px;height:60px;" ></textarea></td></tr>
+</table>
+<input type="submit" name="submit" id="submit" value="Sign Up" formaction="register.php"><br/>
+
+
+</form>
+</center>
+</div>
+</center>
+<!--</div>-->
+<div class="footer">
+  <p>&copy; 2018 MAGICAL WEDDINGS. All rights reserved.</p>
+
+</div>
+
+
+</body>
+</html>

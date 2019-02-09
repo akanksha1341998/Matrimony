@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+     background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	height:90px;
+	width:82.5%;
+}
+
+/* Style the topnav links */
+.topnav button {
+    float: right;
+    display: block;
+    color: orange;
+    text-align: right;
+    padding: 5px 5px;
+    text-decoration: none;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.content {
+  padding: 16px;
+  background-image:url("image/final.jpg");
+  height:600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+   align:center;
+   text-align:center;
+}
+.article1 {
+	background: rgba(0, 0, 0, 0.1);
+	text-align: center;
+	color: white;
+	padding: 20px;
+	width:82.5%;
+	align:center;
+	
+}
+.article2 {
+background-color:white;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	align:center;
+}
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*For producing text on image during hover*/
+.cont {
+    position: relative;
+    float: left;
+    width: 250px;
+    padding: 10px;
+	height: 250px;
+	background-color:black;
+	margin:20px;
+	border-radius:20px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cont:hover .image {
+  opacity: 0.3;
+}
+
+.cont:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*.sticky {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  align:center;
+  
+}
+
+.sticky + .content {
+  padding-top: 102px;
+  align:center;
+}*/
+
+.bottom-left {
+    position: absolute;
+    bottom: 110px;
+    left: 50px;
+}
+/* Style the footer */
+.footer {
+        background-color: black;
+    padding: 20px;
+    text-align: center;
+	height:100px;
+	color: white;
+	margin: 5px 0px 0px 0px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 200%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+	text-align:center;
+}
+
+/* Set a style for all buttons 
+button {
+    background-color: orange;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px solid ;
+    cursor: pointer;
+    width: 100%;
+}*/
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 30%;
+	height:20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 5px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+	text-align:center;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="content">
+<center>
+
+<div class="topnav">
+<img src="image/weddinglogo.png" align="left" style="height:70px;width:200px;"> 
+<button onclick="document.getElementById('id01').style.display='block'" style="text-align:center;font-weight:bold;width:150px;"><img src="image/user.png" style="height:30px;width:30px;" align="middle">Login</button></b></font>
+<div>  
+</center> 
+<center>                                             
+<div class="article1">
+<b style="font-size:20px;font-family:Segoe Script;">The one you are perfect for, is waiting for you to log on.</b>
+<p style="font-size:20px;font-family:cambria;">You believe in soulmates, so do we.<br><br>
+Connect with your perfect one here, on Magical Weddings.</p>
+<form>
+<button style="background-color:black;color:white;padding:5px 5px;width:150px;height:50px;border-radius:10px;" formaction="register.html"><b>Register</b></button>
+</form>
+</div>
+</center>
+<div class="bottom-left"><font color="white" size="7" align="bottom-left" face="Segoe Script"><b>....When Yes Means Forever</b></font></div>
+</div>
+<center>
+<div class="article2">
+<div class="row">
+<div class="cont">
+  <img src="image/c1.jpg" alt="Avatar" class="image" style="width:250px;height:250px;">
+  <div class="middle">
+  <b>Shanaya and Aryan</b><br><hr>
+Out of all the people in the world Out of all the places Somehow, something brought The two of us together At the right place At the right time ..... It's on shadi.com thanks to all team.
+   </div>
+</div>
+<div class="cont">
+  <img src="image/c2.jpg" alt="Avatar" class="image" style="width:250px;height:250px;">
+  <div class="middle">
+   <b>Smrati and Deepak</b><br><hr>
+I got an interest in my Shadi.com profile from her. Then I got called by her family. Later on we noticed that we are from same hometown. Its love marriage arranged by Shadi.com.
+  </div>
+</div>
+<div class="cont">
+  <img src="image/c3.jpg" alt="Avatar" class="image" style="width:250px;height:250px;">
+  <div class="middle">
+   <b> Disha and Hardik</b><br><hr>
+I was not a premium customer by was randomly in a search of my perfect one, and what a coincidence Hardik , by as we all know and we all say destiny permits us what we deserve
+  </div>
+</div>
+<div class="cont">
+  <img src="image/c4.jpg" alt="Avatar" class="image" style="width:250px;height:250px;">
+  <div class="middle">
+   <b> Jyoti and Saurabh</b><br><hr>
+Saurabh searched me on Shaadi.com and sent me a message asking for my number, he called me in the evening and got to know that I go for jogging in the morning .
+  </div>
+</div>
+</div>
+</div>
+</center>
+<div class="footer">
+  <p>&copy; 2018 MAGICAL WEDDINGS. All rights reserved.</p>
+
+</div>
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="image/login.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+	  <table>
+	  <tr><td>
+      <label for="uname"><b>Username</b></label></td>
+      <td><input type="text" placeholder="Enter Username" name="uname" required></td></tr>
+      <tr><td>
+      <label for="psw"><b>Password</b></label></td>
+      <td><input type="password" placeholder="Enter Password" name="psw" required></td></tr>
+	  </table>
+	  
+        
+      <button type="submit" style="background-color:orange;color:white;"><b>Login<b></button>
+    </div>
+  </form>
+</div>
+
+
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="image/adminlog.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+	  <table>
+	  <tr><td>
+      <label for="uname"><b>Username</b></label></td>
+      <td><input type="text" placeholder="Enter Username" name="uname" required></td></tr>
+      <tr><td>
+      <label for="psw"><b>Password</b></label></td>
+      <td><input type="password" placeholder="Enter Password" name="psw" required></td></tr>
+	  </table>
+	  
+        
+      <button type="submit" style="background-color:orange;color:white;"><b>Login<b></button>
+    </div>
+  </form>
+</div>
+
+
+
+<div id="id03" class="modal" style="width:110%;" >
+  
+  <form class="modal-content animate" action="/action_page.php">
+  <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+	  <img src="image/adminlog.png" alt="Avatar" class="avatar">
+    </div>
+	<br>
+    <div class="container">
+	  <table>
+	  <tr><td>
+      <label for="mail"><b>E-mail</b></label></td>
+      <td><input type="email" placeholder="Enter E-mail" name="mail" required></td></tr>
+	  <tr><td>
+      <label for="user"><b>Username</b></label></td>
+      <td><input type="text" placeholder="Enter Username" name="user" required></td></tr>
+      <tr><td>
+      <label for="psw"><b>Password</b></label></td>
+      <td><input type="password" placeholder="Enter Password" name="psw" required></td></tr>
+	  <tr><td>
+      <label for="gen"><b>Gender</b></label></td>
+      <td><input type="radio" name="gen">  Male   <input type="radio" name="gen">  Female</td></tr>
+	  <tr><td>
+      <label for="dob"><b>Date of Birth</b></label></td>
+      <td><input type="text" placeholder="Enter DOB" name="dob" required></td></tr>
+	  <tr><td>
+      <label for="rel"><b>Religion</b></label></td>
+      <td><input type="text" placeholder="Enter Religion" name="rel" required></td></tr>
+      <label for="mar"><b>Marital status</b></label></td>
+      <td><select id="mar"><option>Never Married</option>
+	                       <option>Divorcee</option>
+						   <option>Widowed</option></select></td></tr>
+	  </table>
+	  
+        
+      <button type="submit" style="background-color:orange;color:white;"><b>Signup<b></button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+<script>
+
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+</body>
+</html>
